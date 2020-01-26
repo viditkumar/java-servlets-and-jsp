@@ -16,5 +16,13 @@ public class ToDoService {
 	public List<ToDo> getToDos(){
 		return todos;
 	}
+	
+	public void addTodo(String todo) {
+		todos.add(new ToDo(todo));
+	}
+	
+	public void deleteTodo(String todo) {
+		todos.remove(new ToDo(todo));
+	}
 
 }

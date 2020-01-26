@@ -69,6 +69,9 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("todos", todoService.getToDos());
 			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);*/
 			
+			// Session scope
+			request.getSession().setAttribute("name", name);
+			
 			// Now we will redirect to ToDoServlet.java
 			response.sendRedirect("/todo.do");
 		} else{
